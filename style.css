@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  color: #ededed;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  font-size: 25px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.logo::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  animation: showRight  1s ease forwards;
+  animation-delay: .4s;
+}
+
+.navbar a {
+  font-size: 15px;
+  color: #ededed;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 35px;
+  transition: .3s;
+}
+
+.navbar a:hover, 
+.navbar a.active {
+  color: #747264;
+}
+
+.home {
+  height: 100vh;
+  background: url(./img/1d735ad8eee8350adc96d50e1421ee6d.gif) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.home-sci {
+  position: absolute;
+  bottom: 40px;
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Keyframes Animation */
+@keyframes showRight {
+  100% {
+    width: 0;
+  }
+}
